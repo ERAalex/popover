@@ -20,5 +20,4 @@ export default class CallWidget {
     prepareDiv.appendChild(newButton);
 
   }
-  
 }
