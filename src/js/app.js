@@ -1,7 +1,6 @@
 import PopoverWidget from "./popover-widget/popover";
 import CallWidget from "./call-widget/call-widget";
 
-console.log("start");
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -9,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const prepareWidget = new CallWidget(document.querySelector(".container"));
   prepareWidget.showWidget();
 
-  const widgetPopover = new PopoverWidget();
-  widgetPopover.showHello();
-
-  widgetPopover.preparePopover('NiceHeader', 'Hello World!', document.querySelector(".widjet-container"));
+  const widgetPopover = new PopoverWidget(document.querySelector(".main-container"));
+  widgetPopover.textItems("Hello, this is popover header!", "Let's do something!");
 
 });
